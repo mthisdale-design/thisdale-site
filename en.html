@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thisdale — Health Insurance in Québec</title>
+<meta name="description" content="Health, dental and travel insurance, even with medications or a pre-existing condition. One request, three offers.">
+<meta property="og:title" content="Thisdale — Health Insurance in Québec">
+<meta property="og:description" content="Health, dental and travel insurance, even with medications or a pre-existing condition. One request, three offers.">
+<meta property="og:type" content="website">
+<link rel="alternate" hreflang="fr-CA" href="https://thisdale.ca/index.html">
+<link rel="alternate" hreflang="en-CA" href="https://thisdale.ca/en.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#fafafc}
+a{color:#2f56c4;text-decoration:none}a:hover{color:#1f3f99}
+.navlink{color:#1d1d1f !important;padding:8px 14px;border-radius:980px;transition:background .25s}
+.navlink:hover{background:rgba(0,0,0,.06)}
+.btn{transition:background .25s,transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-ink:hover{background:#000000 !important;color:#ffffff !important;box-shadow:0 14px 30px rgba(0,0,0,.18)}
+.btn-blue:hover{background:#3457c2 !important;color:#ffffff !important;box-shadow:0 14px 30px rgba(62,106,225,.35)}
+.btn-ghost:hover{background:rgba(0,0,0,.08) !important}
+.tab{transition:background .3s,color .3s,box-shadow .3s}
+.card{transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.card:hover{transform:translateY(-4px)}
+.bento{transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.bento:hover{transform:scale(1.012)}
+.ulink{color:inherit !important;text-decoration:underline;text-underline-offset:3px}
+.ulink:hover{opacity:.7}
+details summary{list-style:none;cursor:pointer}
+details summary::-webkit-details-marker{display:none}
+details[open] .chev{transform:rotate(45deg)}
+.chev{transition:transform .3s}
+.field:focus{outline:none;border-color:#3e6ae1 !important;box-shadow:0 0 0 4px rgba(62,106,225,.15)}
+input[type=checkbox]{accent-color:#3e6ae1}
+@keyframes drift1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(80px,40px) scale(1.15)}}
+@keyframes drift2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-90px,60px) scale(1.1)}}
+@keyframes drift3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-70px) scale(1.2)}}
+@keyframes sheen{0%{background-position:0% 50%}100%{background-position:300% 50%}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(52,199,89,.55)}70%{box-shadow:0 0 0 10px rgba(52,199,89,0)}100%{box-shadow:0 0 0 0 rgba(52,199,89,0)}}
+@keyframes scan{0%{transform:translateY(-100%)}100%{transform:translateY(100%)}}
+.blob1{animation:drift1 18s ease-in-out infinite}
+.blob2{animation:drift2 22s ease-in-out infinite}
+.blob3{animation:drift3 26s ease-in-out infinite}
+.sheen{background-size:300% 100%;animation:sheen 6s linear infinite}
+.pulse{animation:pulse 2s infinite}
+.mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace}
+.glowcard{transition:transform .45s cubic-bezier(.2,.8,.2,1),border-color .45s,box-shadow .45s}
+.glowcard:hover{transform:translateY(-6px);border-color:rgba(120,160,255,.6) !important;box-shadow:0 0 0 1px rgba(120,160,255,.35),0 30px 80px rgba(80,120,255,.35) !important}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.rise{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.rise2{animation:rise .9s .15s cubic-bezier(.2,.8,.2,1) both}
+.rise3{animation:rise .9s .3s cubic-bezier(.2,.8,.2,1) both}
+.marquee-track{animation:marquee 38s linear infinite}
+.floaty{animation:float 6s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.rise,.rise2,.rise3,.marquee-track,.floaty,.blob1,.blob2,.blob3,.sheen,.pulse{animation:none}}
+@media (max-width:900px){.nav-links{display:none !important}}
+@media (max-width:600px){.logo-tag{display:none !important}.chat-label{display:none}.chat-launch{width:58px;padding:0 !important;justify-content:center}}
+@media (min-width:640px){.span2{grid-column:span 2}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', Inter, 'Helvetica Neue', Arial, sans-serif; color: #1d1d1f; background: #fafafc; -webkit-font-smoothing: antialiased; line-height: 1.47; position: relative; overflow-x: clip">
+
+<!-- NAVIGATION -->
+<header style="position: sticky; top: 14px; z-index: 20; padding: 0 16px">
+<nav aria-label="Main navigation" style="max-width: 1080px; margin: 0 auto; height: 58px; padding: 0 10px 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: rgba(255,255,255,0.72); backdrop-filter: saturate(180%) blur(24px); -webkit-backdrop-filter: saturate(180%) blur(24px); border: 1px solid rgba(0,0,0,0.06); border-radius: 980px; box-shadow: 0 10px 40px rgba(20,30,80,0.08)">
+<a href="#accueil" aria-label="Thisdale, home" style="text-decoration: none"><span style="display: inline-flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 32 32"><defs><linearGradient id="tg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3e6ae1"/><stop offset="1" stop-color="#0b1f5c"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#tg1)"/><path d="M9 10.5h14" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/><path d="M16 10.5v12" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/><circle cx="22.5" cy="21.5" r="2.2" fill="#7fb2ff"/></svg><span style="display: flex; flex-direction: column; line-height: 1.05"><span style="font-size: 19px; font-weight: 700; letter-spacing: -0.03em; color: #0b1f5c">Thisdale</span><span class="logo-tag" style="font-size: 10px; font-weight: 500; letter-spacing: 0.16em; color: #6e6e73; text-transform: uppercase">Insurance &amp; financial services</span></span></span></a>
+<div class="nav-links" style="display: flex; gap: 2px; font-size: 14px; font-weight: 500">
+<a href="#sante" class="navlink">Health</a>
+<a href="#fonctionnement" class="navlink">How it works</a>
+<a href="#faq" class="navlink">FAQ</a>
+</div>
+<div style="display: flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 500">
+<a href="index.html" class="navlink" lang="fr" aria-label="Version française">FR</a>
+<a href="#contact" class="btn btn-ink" style="background: #1d1d1f; color: #ffffff; padding: 0 18px; min-height: 42px; display: inline-flex; align-items: center; border-radius: 980px; white-space: nowrap">Make a request</a>
+</div>
+</nav>
+</header>
+
+<!-- HERO -->
+<section id="accueil" style="position: relative; padding: 110px 24px 100px; margin-top: -72px">
+<div aria-hidden="true" style="position: absolute; inset: 0; z-index: 0; overflow: hidden">
+<div class="blob1" style="position: absolute; left: -8%; top: 2%; width: 620px; height: 620px; border-radius: 50%; background: radial-gradient(circle, rgba(100,135,255,0.42) 0%, rgba(100,135,255,0) 68%); filter: blur(20px)"></div>
+<div class="blob2" style="position: absolute; right: -10%; top: -6%; width: 680px; height: 680px; border-radius: 50%; background: radial-gradient(circle, rgba(130,160,255,0.28) 0%, rgba(175,140,255,0) 68%); filter: blur(20px)"></div>
+<div class="blob3" style="position: absolute; left: 35%; bottom: -18%; width: 760px; height: 760px; border-radius: 50%; background: radial-gradient(circle, rgba(120,190,255,0.22) 0%, rgba(90,205,255,0) 68%); filter: blur(24px)"></div>
+<div style="position: absolute; inset: 0; background-image: radial-gradient(rgba(30,40,90,0.16) 1px, transparent 1px); background-size: 26px 26px; -webkit-mask-image: radial-gradient(70% 60% at 50% 40%, #000 0%, transparent 100%); mask-image: radial-gradient(70% 60% at 50% 40%, #000 0%, transparent 100%)"></div>
+</div>
+<div style="position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center; padding-top: 60px">
+<p class="rise" style="margin: 0; display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500; color: #1d1d1f; background: rgba(255,255,255,0.7); border: 1px solid rgba(0,0,0,0.06); padding: 8px 18px 8px 14px; border-radius: 980px; backdrop-filter: blur(10px)"><span class="pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #34c759"></span>Health insurance · Throughout Québec</p>
+<h1 class="rise2" style="margin: 0; font-size: clamp(56px, 9.6vw, 136px); line-height: 0.94; font-weight: 700; letter-spacing: -0.055em; color: #0b1f5c">One request.<br><span style="color: #3e6ae1">Three offers.</span></h1>
+<p class="rise3" style="margin: 0; max-width: 560px; font-size: clamp(18px, 1.9vw, 22px); line-height: 1.45; color: #55555c">We compare the major insurers and present the 3 best offers. Even with medications or a pre-existing condition.</p>
+<div class="rise3" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 6px">
+<a href="#contact" class="btn btn-blue" style="min-width: 240px; min-height: 54px; padding: 0 30px; display: inline-flex; align-items: center; justify-content: center; background: #3e6ae1; color: #ffffff; font-size: 16px; font-weight: 600; border-radius: 980px">Make a request</a>
+<a href="#sante" class="btn btn-ghost" style="min-width: 200px; min-height: 54px; padding: 0 26px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.7); color: #1d1d1f; font-size: 16px; font-weight: 600; border-radius: 980px; border: 1px solid rgba(0,0,0,0.06)">See solutions</a>
+</div>
+
+<!-- Comparateur -->
+<div id="comparateur" class="rise3" style="width: 100%; max-width: 1000px; margin-top: 40px; transform: perspective(1600px) rotateX(4deg); transform-origin: 50% 0%; background: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.9); border-radius: 32px; padding: 14px; box-shadow: 0 40px 120px rgba(40,60,160,0.16), inset 0 1px 0 rgba(255,255,255,0.8); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px)">
+<div role="tablist" aria-label="Type of insurance" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; background: rgba(0,0,0,0.04); border-radius: 22px; padding: 6px">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="6">
+<sc-if value="{{t.selected}}" hint-placeholder-val="{{ false }}"><button type="button" role="tab" aria-selected="true" onClick="{{t.pick}}" class="tab" style="font: inherit; font-size: 15px; font-weight: 600; min-height: 46px; padding: 0 22px; border: none; border-radius: 16px; cursor: pointer; background: #ffffff; color: #1d1d1f; box-shadow: 0 4px 14px rgba(0,0,0,0.08)">{{t.label}}</button></sc-if>
+<sc-if value="{{t.unselected}}" hint-placeholder-val="{{ true }}"><button type="button" role="tab" aria-selected="false" onClick="{{t.pick}}" class="tab" style="font: inherit; font-size: 15px; font-weight: 500; min-height: 46px; padding: 0 22px; border: none; border-radius: 16px; cursor: pointer; background: transparent; color: #55555c">{{t.label}}</button></sc-if>
+</sc-for>
+</div>
+<div style="padding: 30px 18px 22px; display: flex; flex-direction: column; gap: 24px">
+<sc-if value="{{isOffers}}" hint-placeholder-val="{{ true }}">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 14px; text-align: left; align-items: center">
+<div class="card" style="background: rgba(255,255,255,0.9); border-radius: 22px; padding: 24px; border: 1px solid rgba(0,0,0,0.06); display: flex; flex-direction: column; gap: 14px">
+<span class="mono" style="font-size: 11px; letter-spacing: 0.14em; color: #6e6e73">ESSENTIAL</span>
+<p style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.015em">Budget option</p>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="height: 8px; width: 80%; border-radius: 4px; background: #ececf1"></span><span style="height: 8px; width: 60%; border-radius: 4px; background: #ececf1"></span><span style="height: 8px; width: 70%; border-radius: 4px; background: #ececf1"></span></div>
+</div>
+<div class="card sheen" style="border-radius: 24px; padding: 2px; background-image: linear-gradient(120deg, #3e6ae1, #7fb2ff, #0b1f5c, #7fb2ff, #3e6ae1); box-shadow: 0 30px 70px rgba(62,106,225,0.28)"><div style="background: #ffffff; border-radius: 22px; padding: 28px 24px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 10px"><span class="mono" style="font-size: 11px; letter-spacing: 0.14em; color: #2f56c4">RECOMMENDED</span><span style="font-size: 12px; font-weight: 600; color: #ffffff; background: #3e6ae1; padding: 5px 11px; border-radius: 980px">Best match</span></div>
+<p style="margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -0.02em">{{current.name}}</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{current.features}}" as="f" hint-placeholder-count="3">
+<li style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>{{f}}</li>
+</sc-for>
+</ul>
+</div></div>
+<div class="card" style="background: rgba(255,255,255,0.9); border-radius: 22px; padding: 24px; border: 1px solid rgba(0,0,0,0.06); display: flex; flex-direction: column; gap: 14px">
+<span class="mono" style="font-size: 11px; letter-spacing: 0.14em; color: #6e6e73">COMPLETE</span>
+<p style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.015em">Maximum protection</p>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="height: 8px; width: 70%; border-radius: 4px; background: #ececf1"></span><span style="height: 8px; width: 90%; border-radius: 4px; background: #ececf1"></span><span style="height: 8px; width: 55%; border-radius: 4px; background: #ececf1"></span></div>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{isGroupTab}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; justify-content: center"><div class="card" style="width: 100%; max-width: 560px; text-align: left; border-radius: 24px; padding: 2px; background-image: linear-gradient(120deg, #3e6ae1, #7fb2ff, #0b1f5c, #7fb2ff, #3e6ae1); box-shadow: 0 30px 70px rgba(62,106,225,0.28)"><div style="background: #ffffff; border-radius: 22px; padding: 30px 28px; display: flex; flex-direction: column; gap: 16px">
+<span class="mono" style="font-size: 11px; letter-spacing: 0.14em; color: #2f56c4">FOR BUSINESSES</span>
+<div><p style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.02em">A plan built for your team</p><p style="margin: 6px 0 0; font-size: 14px; color: #6e6e73">Group health and dental insurance</p></div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px"><li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; font-weight: 500; line-height: 1.45"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><path d="M5 12l5 5 9-10"/></svg>Health, drugs and dental for your employees</li><li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; font-weight: 500; line-height: 1.45"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><path d="M5 12l5 5 9-10"/></svg>Plans for small and medium-sized businesses</li><li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; font-weight: 500; line-height: 1.45"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><path d="M5 12l5 5 9-10"/></svg>Support at enrolment and renewal</li></ul>
+</div></div></div>
+</sc-if>
+<sc-if value="{{isInvestTab}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; justify-content: center"><div class="card" style="width: 100%; max-width: 560px; text-align: left; border-radius: 24px; padding: 2px; background-image: linear-gradient(120deg, #3e6ae1, #7fb2ff, #0b1f5c, #7fb2ff, #3e6ae1); box-shadow: 0 30px 70px rgba(62,106,225,0.28)"><div style="background: #ffffff; border-radius: 22px; padding: 30px 28px; display: flex; flex-direction: column; gap: 16px">
+<span class="mono" style="font-size: 11px; letter-spacing: 0.14em; color: #2f56c4">BY APPOINTMENT</span>
+<div><p style="margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.02em">A strategy built around you</p><p style="margin: 6px 0 0; font-size: 14px; color: #6e6e73">In collaboration with our investment partner</p></div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px"><li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; font-weight: 500; line-height: 1.45"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><path d="M5 12l5 5 9-10"/></svg>A review of your savings and retirement goals</li><li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; font-weight: 500; line-height: 1.45"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><path d="M5 12l5 5 9-10"/></svg>A strategy matched to your horizon and risk tolerance</li><li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; font-weight: 500; line-height: 1.45"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><path d="M5 12l5 5 9-10"/></svg>Regular follow-up on your investments</li></ul>
+</div></div></div>
+</sc-if>
+<div style="display: flex; justify-content: center"><a href="#contact" onClick="{{current.start}}" class="btn btn-ink" style="min-height: 50px; padding: 0 28px; display: inline-flex; align-items: center; background: #1d1d1f; color: #ffffff; font-size: 15px; font-weight: 600; border-radius: 980px">{{current.btn}}</a></div>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-label="Trust signals" style="background: #ffffff; border-top: 1px solid #eef0f5; border-bottom: 1px solid #eef0f5"><div style="max-width: 1180px; margin: 0 auto; padding: 28px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 20px"><div style="display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #0b1f5c"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6l8-3z"/></svg>Representative registered with the AMF</div><div style="display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #0b1f5c"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 21l5-3 5 3-1.5-8.5"/></svg>Member of the Chambre de la sécurité financière</div><div style="display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #0b1f5c"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>Information protected — Law 25</div><div style="display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #0b1f5c"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M3 12h18"/><path d="M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/><circle cx="12" cy="12" r="9"/></svg>Throughout Québec</div></div></section>
+
+<!-- SANTÉ -->
+<section id="sante" style="position: relative; background: #ffffff; padding: 130px 24px; overflow: hidden">
+<div style="position: relative; max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px">
+<span class="mono" style="font-size: 12px; letter-spacing: 0.2em; color: #2f56c4">OUR SPECIALTY · HEALTH INSURANCE</span>
+<h2 style="margin: 0; font-size: clamp(44px, 6.4vw, 88px); line-height: 0.96; font-weight: 700; letter-spacing: -0.055em">Your situation.<br><span style="color: #3e6ae1">Our solution.</span></h2>
+<p style="margin: 0; font-size: clamp(17px, 1.8vw, 20px); color: #55555c">Medical care, drugs, dental, paramedical and travel.</p>
+</div>
+<div style="background: rgba(245,246,252,0.85); border: 1px solid rgba(0,0,0,0.05); border-radius: 34px; padding: 14px; box-shadow: 0 40px 100px rgba(40,60,160,0.10)">
+<div role="tablist" aria-label="Your situation" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 8px">
+<sc-for list="{{situations}}" as="x" hint-placeholder-count="3">
+<sc-if value="{{x.selected}}" hint-placeholder-val="{{ false }}"><button type="button" role="tab" aria-selected="true" onClick="{{x.pick}}" class="tab" style="font: inherit; text-align: left; min-height: 72px; padding: 16px 20px; border: none; border-radius: 22px; cursor: pointer; background: #1d1d1f; color: #ffffff; box-shadow: 0 14px 30px rgba(0,0,0,0.18); font-size: 17px; font-weight: 600">{{x.label}}</button></sc-if>
+<sc-if value="{{x.unselected}}" hint-placeholder-val="{{ true }}"><button type="button" role="tab" aria-selected="false" onClick="{{x.pick}}" class="tab" style="font: inherit; text-align: left; min-height: 72px; padding: 16px 20px; border: none; border-radius: 22px; cursor: pointer; background: #ffffff; color: #1d1d1f; font-size: 17px; font-weight: 600">{{x.label}}</button></sc-if>
+</sc-for>
+</div>
+<div role="tabpanel" style="padding: clamp(28px, 5vw, 52px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 36px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<h3 style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.02; font-weight: 700; letter-spacing: -0.045em">{{sit.title}}</h3>
+<div><a href="#contact" onClick="{{startHealth}}" class="btn btn-blue" style="min-height: 50px; padding: 0 26px; display: inline-flex; align-items: center; background: #3e6ae1; color: #ffffff; font-size: 15px; font-weight: 600; border-radius: 980px">Find my solution</a></div>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{sit.points}}" as="pt" hint-placeholder-count="3">
+<li style="background: #ffffff; border: 1px solid rgba(0,0,0,0.05); border-radius: 18px; padding: 18px 20px; display: flex; gap: 14px; align-items: center; font-size: 16px; font-weight: 500"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>{{pt}}</li>
+</sc-for>
+</ul>
+</div>
+</div>
+<p style="margin: 0; text-align: center; font-size: 12px; color: #6e6e73">Subject to each insurer's eligibility rules and conditions.</p>
+</div>
+</section>
+
+<!-- POUR QUI (photos clients) -->
+<section aria-label="Who we help" style="background: #fafafc; padding: 120px 20px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
+<span class="mono" style="font-size: 12px; letter-spacing: 0.2em; color: #2f56c4">WHO WE HELP</span>
+<h2 style="margin: 0; font-size: clamp(40px, 5.6vw, 76px); line-height: 0.98; font-weight: 700; letter-spacing: -0.05em; color: #0b1f5c">A solution<br><span style="color: #3e6ae1">for every stage of life.</span></h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px">
+<a href="#contact" class="bento" style="border-radius: 30px; overflow: hidden; background: #ffffff; border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column; text-decoration: none; color: #1d1d1f; box-shadow: 0 20px 50px rgba(11,31,92,0.06)">
+<img src="assets/famille.jpg" alt="Parents and child cooking together at home" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 62% 50%">
+<div style="padding: 26px 28px 30px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.03em; color: #0b1f5c">Families</h3>
+<p style="margin: 0; font-size: 16px; color: #55555c">Dental, drugs and travel for the whole family.</p>
+<span style="margin-top: 6px; font-size: 15px; font-weight: 600; color: #2f56c4">Make a request →</span>
+</div>
+</a>
+<a href="#contact" class="bento" style="border-radius: 30px; overflow: hidden; background: #ffffff; border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column; text-decoration: none; color: #1d1d1f; box-shadow: 0 20px 50px rgba(11,31,92,0.06)">
+<img src="assets/autonome.jpg" alt="Smiling self-employed woman using her laptop" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 68% 40%">
+<div style="padding: 26px 28px 30px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.03em; color: #0b1f5c">Self-employed workers</h3>
+<p style="margin: 0; font-size: 16px; color: #55555c">Real coverage, even without a group plan.</p>
+<span style="margin-top: 6px; font-size: 15px; font-weight: 600; color: #2f56c4">Make a request →</span>
+</div>
+</a>
+<a href="#contact" class="bento" style="border-radius: 30px; overflow: hidden; background: #ffffff; border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column; text-decoration: none; color: #1d1d1f; box-shadow: 0 20px 50px rgba(11,31,92,0.06)">
+<img src="assets/retraites.jpg" alt="Retired couple gardening together" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 60% 45%">
+<div style="padding: 26px 28px 30px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.03em; color: #0b1f5c">Pre-retirees and retirees</h3>
+<p style="margin: 0; font-size: 16px; color: #55555c">After your group plan, keep your coverage.</p>
+<span style="margin-top: 6px; font-size: 15px; font-weight: 600; color: #2f56c4">Make a request →</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+
+<!-- COMMENT ÇA MARCHE -->
+<section id="fonctionnement" style="position: relative; background: #0b1f5c; color: #ffffff; padding: 130px 24px; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(120,150,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(120,150,255,0.08) 1px, transparent 1px); background-size: 64px 64px; -webkit-mask-image: radial-gradient(70% 70% at 50% 30%, #000 0%, transparent 100%); mask-image: radial-gradient(70% 70% at 50% 30%, #000 0%, transparent 100%)"></div>
+<div aria-hidden="true" class="blob2" style="position: absolute; left: 50%; top: -260px; width: 900px; height: 600px; margin-left: -450px; border-radius: 50%; background: radial-gradient(circle, rgba(90,110,255,0.45) 0%, rgba(90,110,255,0) 65%); filter: blur(30px)"></div>
+<div style="position: relative; max-width: 1160px; margin: 0 auto; display: flex; flex-direction: column; gap: 64px">
+<h2 style="margin: 0; text-align: center; font-size: clamp(44px, 6.4vw, 88px); line-height: 0.96; font-weight: 700; letter-spacing: -0.055em">Simple.<br><span style="color: #8fb4ff">In three steps.</span></h2>
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px">
+<li class="glowcard" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 28px; padding: 38px 32px; display: flex; flex-direction: column; gap: 14px"><span class="mono" style="font-size: 13px; color: #8fa8ff">01 —</span><h3 style="margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -0.025em">Make a request</h3><p style="margin: 0; font-size: 16px; color: #a7b0d0">Less than a minute.</p></li>
+<li class="glowcard" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 28px; padding: 38px 32px; display: flex; flex-direction: column; gap: 14px"><span class="mono" style="font-size: 13px; color: #8fa8ff">02 —</span><h3 style="margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -0.025em">We talk</h3><p style="margin: 0; font-size: 16px; color: #a7b0d0">Our team contacts you to understand your needs.</p></li>
+<li class="glowcard" style="background: #3e6ae1; border: 1px solid rgba(143,168,255,0.6); border-radius: 28px; padding: 38px 32px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 30px 80px rgba(80,110,255,0.3)"><span class="mono" style="font-size: 13px; color: #dce5ff">03 —</span><h3 style="margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -0.025em">Your 3 offers</h3><p style="margin: 0; font-size: 16px; color: #e6ecff">You choose. We handle the rest, and the service after.</p></li>
+</ol>
+</div>
+</section>
+
+<!-- AUTRES PROTECTIONS -->
+<section id="protections" style="background: #fafafc; padding: 110px 20px">
+<div style="max-width: 1160px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+<h2 style="margin: 0; text-align: center; font-size: clamp(36px, 4.6vw, 60px); line-height: 1; font-weight: 700; letter-spacing: -0.05em">Also available</h2>
+<p style="margin: -24px 0 0; text-align: center; font-size: 17px; color: #55555c">For you, your family and your business.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px">
+<a href="#contact" onClick="{{startGroup}}" class="bento" style="min-height: 220px; border-radius: 28px; padding: 30px; box-sizing: border-box; background: #0b1f5c; border: 1px solid rgba(0,0,0,0.05); color: #ffffff; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; text-decoration: none">
+<svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#8fb4ff" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5"/><path d="M9 10h.01M15 10h.01M12 10h.01"/></svg>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.03em">Group insurance</h3><span style="font-size: 14px; color: #c9d4f2">Health and dental for your employees</span><span style="font-size: 15px; font-weight: 600; color: #8fb4ff">Make a request →</span></div>
+</a>
+<a href="#contact" class="bento" style="min-height: 220px; border-radius: 28px; padding: 30px; box-sizing: border-box; background: #ffffff; border: 1px solid rgba(0,0,0,0.05); color: #1d1d1f; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; text-decoration: none">
+<svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.03em">Life insurance</h3><span style="font-size: 15px; font-weight: 600; color: #2f56c4">Make a request →</span></div>
+</a>
+<a href="#contact" class="bento" style="min-height: 220px; border-radius: 28px; padding: 30px; box-sizing: border-box; background: #ffffff; border: 1px solid rgba(0,0,0,0.05); color: #1d1d1f; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; text-decoration: none">
+<svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.03em">Disability</h3><span style="font-size: 15px; font-weight: 600; color: #2f56c4">Make a request →</span></div>
+</a>
+<a href="#contact" class="bento" style="min-height: 220px; border-radius: 28px; padding: 30px; box-sizing: border-box; background: #ffffff; border: 1px solid rgba(0,0,0,0.05); color: #1d1d1f; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; text-decoration: none">
+<svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.03em">Critical illness</h3><span style="font-size: 15px; font-weight: 600; color: #2f56c4">Make a request →</span></div>
+</a>
+<a href="#contact" class="bento" style="min-height: 220px; border-radius: 28px; padding: 30px; box-sizing: border-box; background: #ffffff; border: 1px solid rgba(0,0,0,0.05); color: #1d1d1f; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; text-decoration: none">
+<svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M4 16l5-5 4 3 7-8"/><path d="M15 6h5v5"/></svg>
+<div style="display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.03em">Investments</h3><span style="font-size: 15px; font-weight: 600; color: #2f56c4">Book a meeting →</span></div>
+</a>
+</div>
+</div>
+</section>
+
+<!-- DEMANDE -->
+<section id="contact" style="background: #ffffff; padding: 40px 16px 110px; position: relative">
+<div style="max-width: 1240px; margin: 0 auto; position: relative; border-radius: 40px; overflow: hidden; background: #0b1f5c; padding: clamp(44px, 6vw, 88px) clamp(22px, 5vw, 80px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 56px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<h2 style="margin: 0; font-size: clamp(46px, 6vw, 84px); line-height: 0.95; font-weight: 700; letter-spacing: -0.055em; color: #ffffff">Your 3 offers<br><span style="color: #8fb4ff">start here.</span></h2>
+<p style="margin: 0; font-size: 19px; color: #c9d4f2">No obligation. Our team will contact you.</p>
+<div style="display: flex; align-items: center; gap: 16px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16); border-radius: 22px; padding: 16px 18px; max-width: 440px">
+<div aria-hidden="true" style="width: 56px; height: 56px; flex-shrink: 0; border-radius: 16px; background: linear-gradient(140deg, #3e6ae1, #2f56c4); display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 24px rgba(62,106,225,0.35)"><svg width="34" height="34" viewBox="0 0 32 32"><defs><linearGradient id="tg5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe7ff"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#tg5)"/><path d="M9 10.5h14" stroke="#0b1f5c" stroke-width="3" stroke-linecap="round"/><path d="M16 10.5v12" stroke="#0b1f5c" stroke-width="3" stroke-linecap="round"/><circle cx="22.5" cy="21.5" r="2.2" fill="#3e6ae1"/></svg></div>
+<div style="display: flex; flex-direction: column; gap: 2px; font-size: 13px; color: #c9d4f2"><span style="font-size: 15px; font-weight: 600; color: #ffffff">Thisdale Team</span><span>Dubois Services Financiers inc. · <a href="https://lautorite.qc.ca/en/general-public/registers" class="ulink">AMF certificate 161128</a></span></div>
+</div>
+<a href="tel:+14382314777" style="display: inline-flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 600; color: #ffffff; min-height: 48px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8fb4ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h3l2 5-2.5 1.5a11 11 0 005 5L14 12l5 2v3a2 2 0 01-2 2A16 16 0 013 5a2 2 0 012-2z"/></svg>438 231-4777</a>
+</div>
+<form aria-label="Quote request" style="background: rgba(255,255,255,0.88); border: 1px solid rgba(255,255,255,0.9); border-radius: 28px; padding: 34px; display: flex; flex-direction: column; gap: 22px; box-shadow: 0 30px 80px rgba(40,60,160,0.12); backdrop-filter: blur(20px); min-height: 460px">
+<sc-if value="{{notDone}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: center"><span class="mono" style="font-size: 12px; letter-spacing: 0.14em; color: #2f56c4">STEP {{stepNum}} / 3</span><span style="font-size: 12px; color: #6e6e73">Less than a minute</span></div>
+<div aria-hidden="true" style="display: flex; gap: 6px"><sc-if value="{{prog.s1}}" hint-placeholder-val="{{ true }}"><span style="flex: 1; height: 5px; border-radius: 3px; background: #3e6ae1"></span></sc-if><sc-if value="{{prog.n1}}" hint-placeholder-val="{{ false }}"><span style="flex: 1; height: 5px; border-radius: 3px; background: #e5e5ea"></span></sc-if><sc-if value="{{prog.s2}}" hint-placeholder-val="{{ true }}"><span style="flex: 1; height: 5px; border-radius: 3px; background: #3e6ae1"></span></sc-if><sc-if value="{{prog.n2}}" hint-placeholder-val="{{ false }}"><span style="flex: 1; height: 5px; border-radius: 3px; background: #e5e5ea"></span></sc-if><sc-if value="{{prog.s3}}" hint-placeholder-val="{{ true }}"><span style="flex: 1; height: 5px; border-radius: 3px; background: #3e6ae1"></span></sc-if><sc-if value="{{prog.n3}}" hint-placeholder-val="{{ false }}"><span style="flex: 1; height: 5px; border-radius: 3px; background: #e5e5ea"></span></sc-if></div>
+</div>
+</sc-if>
+
+<sc-if value="{{isStep1}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.03em">What are you interested in?</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 10px">
+<sc-for list="{{productOpts}}" as="po" hint-placeholder-count="6">
+<sc-if value="{{po.selected}}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{po.pick}}" aria-pressed="true" class="tab" style="font: inherit; text-align: left; min-height: 64px; padding: 14px 18px; border: 2px solid #3e6ae1; border-radius: 16px; cursor: pointer; background: rgba(62,106,225,0.08); color: #1d1d1f; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: space-between; gap: 10px">{{po.label}}<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></button></sc-if>
+<sc-if value="{{po.unselected}}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{po.pick}}" aria-pressed="false" class="tab" style="font: inherit; text-align: left; min-height: 64px; padding: 14px 18px; border: 2px solid #e5e5ea; border-radius: 16px; cursor: pointer; background: #ffffff; color: #1d1d1f; font-size: 15px; font-weight: 500">{{po.label}}</button></sc-if>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isStep2}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="align-self: flex-start; font-size: 13px; font-weight: 600; color: #2f56c4; background: rgba(62,106,225,0.1); padding: 5px 12px; border-radius: 980px">{{chosenProduct}}</span><h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.03em">{{step2Title}}</h3></div>
+
+<sc-if value="{{showWho}}" hint-placeholder-val="{{ true }}">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 10px">
+<sc-for list="{{whoOpts}}" as="wo" hint-placeholder-count="4">
+<sc-if value="{{wo.selected}}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{wo.pick}}" aria-pressed="true" class="tab" style="font: inherit; text-align: left; min-height: 60px; padding: 12px 16px; border: 2px solid #3e6ae1; border-radius: 16px; cursor: pointer; background: rgba(62,106,225,0.08); color: #1d1d1f; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: space-between; gap: 10px">{{wo.label}}<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></button></sc-if>
+<sc-if value="{{wo.unselected}}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{wo.pick}}" aria-pressed="false" class="tab" style="font: inherit; text-align: left; min-height: 60px; padding: 12px 16px; border: 2px solid #e5e5ea; border-radius: 16px; cursor: pointer; background: #ffffff; color: #1d1d1f; font-size: 15px; font-weight: 500">{{wo.label}}</button></sc-if>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{hasMembers}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{members}}" as="mb" hint-placeholder-count="2">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; background: #ffffff; border: 1px solid #e5e5ea; border-radius: 16px; padding: 12px 14px">
+<label for="age-{{mb.idx}}" style="flex: 1 1 110px; font-size: 15px; font-weight: 600">{{mb.label}}</label>
+<div style="display: flex; align-items: center; gap: 8px">
+<input id="age-{{mb.idx}}" type="text" inputmode="numeric" maxlength="3" placeholder="Age" aria-label="Age — {{mb.label}}" value="{{mb.age}}" onInput="{{mb.onAge}}" class="field" style="width: 74px; font: inherit; font-size: 16px; text-align: center; padding: 10px 8px; border: 1px solid #d2d2d7; border-radius: 10px; background: #ffffff; color: #1d1d1f">
+<span style="font-size: 13px; color: #6e6e73">yrs</span>
+</div>
+<sc-if value="{{mb.showSmoker}}" hint-placeholder-val="{{ false }}">
+<div role="group" aria-label="Smoker — {{mb.label}}" style="display: flex; gap: 6px">
+<sc-if value="{{mb.isNon}}" hint-placeholder-val="{{ false }}"><button type="button" aria-pressed="true" onClick="{{mb.setNon}}" style="font: inherit; min-height: 40px; padding: 0 14px; border: 2px solid #3e6ae1; border-radius: 980px; cursor: pointer; background: rgba(62,106,225,0.1); color: #0b1f5c; font-size: 13px; font-weight: 600">Non-smoker</button></sc-if>
+<sc-if value="{{mb.notNon}}" hint-placeholder-val="{{ true }}"><button type="button" aria-pressed="false" onClick="{{mb.setNon}}" style="font: inherit; min-height: 40px; padding: 0 14px; border: 2px solid #e5e5ea; border-radius: 980px; cursor: pointer; background: #ffffff; color: #424245; font-size: 13px; font-weight: 500">Non-smoker</button></sc-if>
+<sc-if value="{{mb.isYes}}" hint-placeholder-val="{{ false }}"><button type="button" aria-pressed="true" onClick="{{mb.setYes}}" style="font: inherit; min-height: 40px; padding: 0 14px; border: 2px solid #3e6ae1; border-radius: 980px; cursor: pointer; background: rgba(62,106,225,0.1); color: #0b1f5c; font-size: 13px; font-weight: 600">Smoker</button></sc-if>
+<sc-if value="{{mb.notYes}}" hint-placeholder-val="{{ true }}"><button type="button" aria-pressed="false" onClick="{{mb.setYes}}" style="font: inherit; min-height: 40px; padding: 0 14px; border: 2px solid #e5e5ea; border-radius: 980px; cursor: pointer; background: #ffffff; color: #424245; font-size: 13px; font-weight: 500">Smoker</button></sc-if>
+</div>
+</sc-if>
+<sc-if value="{{mb.removable}}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{mb.remove}}" aria-label="Remove {{mb.label}}" style="font: inherit; min-width: 44px; min-height: 44px; border: none; background: none; color: #6e6e73; cursor: pointer; font-size: 13px">Remove</button></sc-if>
+</div>
+</sc-for>
+<sc-if value="{{canAddChild}}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{addChild}}" style="font: inherit; align-self: flex-start; min-height: 44px; padding: 0 16px; border: 1px dashed #3e6ae1; border-radius: 980px; background: none; color: #2f56c4; font-size: 14px; font-weight: 600; cursor: pointer">+ Add a child</button></sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{isGroup}}" hint-placeholder-val="{{ false }}">
+<div role="group" aria-label="Number of employees" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 10px">
+<sc-for list="{{empOpts}}" as="eo" hint-placeholder-count="4">
+<sc-if value="{{eo.selected}}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{eo.pick}}" aria-pressed="true" class="tab" style="font: inherit; text-align: left; min-height: 60px; padding: 12px 16px; border: 2px solid #3e6ae1; border-radius: 16px; cursor: pointer; background: rgba(62,106,225,0.08); color: #1d1d1f; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: space-between; gap: 10px">{{eo.label}}<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></button></sc-if>
+<sc-if value="{{eo.unselected}}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{eo.pick}}" aria-pressed="false" class="tab" style="font: inherit; text-align: left; min-height: 60px; padding: 12px 16px; border: 2px solid #e5e5ea; border-radius: 16px; cursor: pointer; background: #ffffff; color: #1d1d1f; font-size: 15px; font-weight: 500">{{eo.label}}</button></sc-if>
+</sc-for>
+</div>
+</sc-if>
+<sc-if value="{{isHealth}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 6px 0 0; font-size: 15px; font-weight: 600">Have you left a group plan in the last 90 days?</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 10px">
+<sc-for list="{{groupOpts}}" as="go" hint-placeholder-count="2">
+<sc-if value="{{go.selected}}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{go.pick}}" aria-pressed="true" class="tab" style="font: inherit; text-align: left; min-height: 60px; padding: 12px 16px; border: 2px solid #3e6ae1; border-radius: 16px; cursor: pointer; background: rgba(62,106,225,0.08); color: #1d1d1f; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: space-between; gap: 10px">{{go.label}}<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></button></sc-if>
+<sc-if value="{{go.unselected}}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{go.pick}}" aria-pressed="false" class="tab" style="font: inherit; text-align: left; min-height: 60px; padding: 12px 16px; border: 2px solid #e5e5ea; border-radius: 16px; cursor: pointer; background: #ffffff; color: #1d1d1f; font-size: 15px; font-weight: 500">{{go.label}}</button></sc-if>
+</sc-for>
+</div>
+<p style="margin: 0; font-size: 13px; color: #6e6e73">Why we ask: leaving a group plan may give you access to options without proof of health, for a limited time.</p>
+</div>
+</sc-if>
+<sc-if value="{{showError}}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin: 0; font-size: 14px; font-weight: 500; color: #c0362c">{{errorText}}</p></sc-if>
+<div style="display: flex; justify-content: space-between; gap: 10px; margin-top: 6px"><button type="button" onClick="{{goBack}}" class="btn btn-ghost" style="font: inherit; font-size: 15px; font-weight: 500; min-height: 48px; padding: 0 20px; border: none; border-radius: 980px; background: rgba(0,0,0,0.05); color: #1d1d1f; cursor: pointer">‹ Back</button><button type="button" onClick="{{goNext}}" class="btn btn-ink" style="font: inherit; font-size: 15px; font-weight: 600; min-height: 48px; padding: 0 26px; border: none; border-radius: 980px; background: #1d1d1f; color: #ffffff; cursor: pointer">Continue</button></div>
+</div>
+</sc-if>
+
+<sc-if value="{{isStep3}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.03em">How can we reach you?</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 7px"><label for="prenom" style="font-size: 13px; font-weight: 500">First name</label><input id="prenom" type="text" autocomplete="given-name" required class="field" style="font: inherit; font-size: 16px; padding: 13px 14px; border: 1px solid #d2d2d7; border-radius: 12px; background: #ffffff; color: #1d1d1f"></div>
+<div style="display: flex; flex-direction: column; gap: 7px"><label for="nom" style="font-size: 13px; font-weight: 500">Last name</label><input id="nom" type="text" autocomplete="family-name" required class="field" style="font: inherit; font-size: 16px; padding: 13px 14px; border: 1px solid #d2d2d7; border-radius: 12px; background: #ffffff; color: #1d1d1f"></div>
+<div style="display: flex; flex-direction: column; gap: 7px"><label for="tel" style="font-size: 13px; font-weight: 500">Phone</label><input id="tel" type="tel" autocomplete="tel" required class="field" style="font: inherit; font-size: 16px; padding: 13px 14px; border: 1px solid #d2d2d7; border-radius: 12px; background: #ffffff; color: #1d1d1f"></div>
+<div style="display: flex; flex-direction: column; gap: 7px"><label for="courriel" style="font-size: 13px; font-weight: 500">Email</label><input id="courriel" type="email" autocomplete="email" required class="field" style="font: inherit; font-size: 16px; padding: 13px 14px; border: 1px solid #d2d2d7; border-radius: 12px; background: #ffffff; color: #1d1d1f"></div>
+</div>
+<div role="group" aria-label="When is the best time to reach you?" style="display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 15px; font-weight: 600">When is the best time to reach you?</p>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{timeOpts}}" as="tm" hint-placeholder-count="3">
+<sc-if value="{{tm.selected}}" hint-placeholder-val="{{ false }}"><button type="button" aria-pressed="true" onClick="{{tm.pick}}" class="tab" style="font: inherit; text-align: left; min-height: 52px; padding: 10px 14px; border: 2px solid #3e6ae1; border-radius: 14px; cursor: pointer; background: rgba(62,106,225,0.08); color: #1d1d1f; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: space-between; gap: 8px">{{tm.label}}<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3e6ae1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></button></sc-if>
+<sc-if value="{{tm.unselected}}" hint-placeholder-val="{{ true }}"><button type="button" aria-pressed="false" onClick="{{tm.pick}}" class="tab" style="font: inherit; text-align: left; min-height: 52px; padding: 10px 14px; border: 2px solid #e5e5ea; border-radius: 14px; cursor: pointer; background: #ffffff; color: #1d1d1f; font-size: 15px; font-weight: 500">{{tm.label}}</button></sc-if>
+</sc-for>
+</div>
+</div>
+<label style="display: flex; gap: 12px; align-items: flex-start; font-size: 13px; line-height: 1.5; color: #424245; cursor: pointer">
+<input id="consent-main" type="checkbox" required style="width: 20px; height: 20px; margin: 1px 0 0; flex-shrink: 0">
+<span>I agree that my personal information may be collected and used to process my request and present insurance products to me, in accordance with the <a href="privacy.html" class="ulink">privacy policy</a>. (Required)</span>
+</label>
+<label style="display: flex; gap: 12px; align-items: flex-start; font-size: 13px; line-height: 1.5; color: #424245; cursor: pointer">
+<input id="consent-marketing" type="checkbox" style="width: 20px; height: 20px; margin: 1px 0 0; flex-shrink: 0">
+<span>I agree to receive emails and text messages from Thisdale (reminders, information). I can unsubscribe at any time. (Optional)</span>
+</label>
+<sc-if value="{{err3}}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin: 0; font-size: 14px; font-weight: 500; color: #c0362c">{{err3}}</p></sc-if>
+<div style="display: flex; justify-content: space-between; gap: 10px; margin-top: 4px"><button type="button" onClick="{{goBack}}" class="btn btn-ghost" style="font: inherit; font-size: 15px; font-weight: 500; min-height: 48px; padding: 0 20px; border: none; border-radius: 980px; background: rgba(0,0,0,0.05); color: #1d1d1f; cursor: pointer">‹ Back</button><button type="button" onClick="{{submit}}" class="btn btn-blue" style="font: inherit; font-size: 15px; font-weight: 600; min-height: 48px; padding: 0 26px; border: none; border-radius: 980px; background: #3e6ae1; color: #ffffff; cursor: pointer">Send my request</button></div>
+<p style="margin: 0; font-size: 12px; line-height: 1.5; color: #6e6e73">No obligation. A quote is not an offer of insurance.</p>
+</div>
+</sc-if>
+
+<sc-if value="{{isDone}}" hint-placeholder-val="{{ false }}">
+<div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 18px; padding: 30px 10px">
+<span style="width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(140deg, #3e6ae1, #6b5bff); display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 20px 50px rgba(62,106,225,0.4)"><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>
+<h3 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.035em">Thank you! We got it.</h3>
+<p style="margin: 0; max-width: 360px; font-size: 17px; color: #55555c">A member of our team will contact you shortly to discuss your needs.</p>
+<button type="button" onClick="{{restart}}" style="font: inherit; font-size: 14px; background: none; border: none; color: #2f56c4; cursor: pointer; min-height: 44px">Make another request</button>
+</div>
+</sc-if>
+</form>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="background: #ffffff; padding: 40px 24px 120px">
+<div style="max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px">
+<h2 style="margin: 0; text-align: center; font-size: clamp(36px, 4.6vw, 56px); line-height: 1; font-weight: 700; letter-spacing: -0.05em; color: #0b1f5c">Frequently asked questions</h2>
+<div role="tablist" aria-label="Question category" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px">
+<sc-for list="{{faqTabs}}" as="ft" hint-placeholder-count="6">
+<sc-if value="{{ft.selected}}" hint-placeholder-val="{{ false }}"><button type="button" role="tab" aria-selected="true" onClick="{{ft.pick}}" class="tab" style="font: inherit; font-size: 14px; font-weight: 600; min-height: 44px; padding: 0 18px; border: 1px solid #0b1f5c; border-radius: 980px; cursor: pointer; background: #0b1f5c; color: #ffffff">{{ft.label}}</button></sc-if>
+<sc-if value="{{ft.unselected}}" hint-placeholder-val="{{ true }}"><button type="button" role="tab" aria-selected="false" onClick="{{ft.pick}}" class="tab" style="font: inherit; font-size: 14px; font-weight: 500; min-height: 44px; padding: 0 18px; border: 1px solid #d8def0; border-radius: 980px; cursor: pointer; background: #ffffff; color: #0b1f5c">{{ft.label}}</button></sc-if>
+</sc-for>
+</div>
+<div role="tabpanel" style="border-top: 1px solid #d2d2d7">
+<sc-for list="{{faqItems}}" as="fq" hint-placeholder-count="3">
+<details style="border-bottom: 1px solid #d2d2d7">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 22px 0; font-size: 19px; font-weight: 600; letter-spacing: -0.015em; min-height: 44px">{{fq.q}}<svg class="chev" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="1.6" stroke-linecap="round" style="flex-shrink: 0"><path d="M12 5v14M5 12h14"/></svg></summary>
+<p style="margin: 0 0 24px; font-size: 16px; line-height: 1.55; color: #55555c">{{fq.a}}</p>
+</details>
+</sc-for>
+</div>
+<p style="margin: 0; text-align: center; font-size: 15px; color: #6e6e73">Another question? <a href="#contact" class="ulink">Make a request</a> or call <a href="tel:+14382314777" class="ulink">438 231-4777</a>.</p>
+</div>
+</section>
+
+<!-- PIED DE PAGE / MENTIONS -->
+<footer style="background: #f5f6fa; border-top: 1px solid #e5e7ef; padding: 72px 24px 120px">
+<div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; font-size: 12px; line-height: 1.6; color: #6e6e73">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 36px">
+<div style="display: flex; flex-direction: column; gap: 14px"><span style="display: inline-flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="34" height="34" viewBox="0 0 32 32"><defs><linearGradient id="tg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3e6ae1"/><stop offset="1" stop-color="#0b1f5c"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#tg2)"/><path d="M9 10.5h14" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/><path d="M16 10.5v12" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/><circle cx="22.5" cy="21.5" r="2.2" fill="#7fb2ff"/></svg><span style="display: flex; flex-direction: column; line-height: 1.05"><span style="font-size: 22px; font-weight: 700; letter-spacing: -0.03em; color: #0b1f5c">Thisdale</span></span></span><p style="margin: 0; font-size: 14px; color: #424245">Insurance, simplified.</p></div>
+<div style="display: flex; flex-direction: column; gap: 12px"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #0b1f5c">Insurance</p><a href="#sante" style="font-size: 14px; color: #424245">Health, dental and travel</a><a href="#protections" style="font-size: 14px; color: #424245">Life insurance</a><a href="#protections" style="font-size: 14px; color: #424245">Disability</a><a href="#protections" style="font-size: 14px; color: #424245">Critical illness</a><a href="#protections" style="font-size: 14px; color: #424245">Investments</a><a href="#protections" style="font-size: 14px; color: #424245">Group insurance</a></div>
+<div style="display: flex; flex-direction: column; gap: 12px"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #0b1f5c">Thisdale</p><a href="#fonctionnement" style="font-size: 14px; color: #424245">How it works</a><a href="#faq" style="font-size: 14px; color: #424245">Frequently asked questions</a><a href="#contact" style="font-size: 14px; color: #424245">Make a request</a><a href="index.html" lang="fr" style="font-size: 14px; color: #424245">Français</a></div>
+<div style="display: flex; flex-direction: column; gap: 12px"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #0b1f5c">Legal</p><a href="privacy.html" style="font-size: 14px; color: #424245">Privacy policy</a><button type="button" onClick="{{openCookies}}" style="font: inherit; font-size: 14px; text-align: left; background: none; border: none; padding: 0; color: #424245; cursor: pointer">Cookie settings</button><a href="#plaintes" style="font-size: 14px; color: #424245">Complaints</a><a href="https://lautorite.qc.ca/en/general-public/registers" style="font-size: 14px; color: #424245">AMF register ↗</a></div>
+<div style="display: flex; flex-direction: column; gap: 12px"><p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #0b1f5c">Contact</p><a href="tel:+14382314777" style="font-size: 14px; color: #424245">438 231-4777</a><a href="mailto:michael@thisdale.ca" style="font-size: 14px; color: #424245">michael@thisdale.ca</a><span style="font-size: 14px; color: #424245">44 des Chênes Avenue<br>Candiac, Québec J5R 0V2</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 22px; border-top: 1px solid #e5e5ea">
+<p style="margin: 0">Michael Thisdale, Financial Security Advisor, representative in insurance of persons registered with the Autorité des marchés financiers (certificate No. 161128), acting on behalf of Dubois Services Financiers inc., a firm registered with the Autorité des marchés financiers. Member of the Chambre de la sécurité financière.</p>
+<p style="margin: 0">Partner: Michael Thisdale refers requests for life insurance, disability insurance, critical illness insurance and investments to his partner Guillaume Tremblay, Financial Security Advisor attached to Assurances François Tremblay inc., a financial services firm. Michael Thisdale does not advise on these products himself. He receives a share of Guillaume Tremblay's compensation for these referrals. This compensation will be disclosed to you in writing at the time of the referral.</p>
+<p id="plaintes" style="margin: 0">Complaints: you may file a complaint with Michael Thisdale at 44 des Chênes Avenue, Candiac, Québec J5R 0V2, at 438 231-4777 or at michael@thisdale.ca. If you are not satisfied with how your complaint was handled, you may ask that your file be transferred to the Autorité des marchés financiers.</p>
+<p style="margin: 0">The comparison shown on this site is illustrative. The options offered depend on your profile and on the products available from insurers at the time of your request. Coverage is subject to the terms, limitations and exclusions of the insurers' contracts. This site is for information only and does not replace a needs analysis.</p>
+<p style="margin: 0">Person in charge of the protection of personal information: Michael Thisdale — <a href="mailto:michael@thisdale.ca" class="ulink">michael@thisdale.ca</a></p>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 18px; border-top: 1px solid #e5e7ef">
+<span>© 2026 Thisdale. All rights reserved. · Photos: Elina Fairytale, Hanna Pad and Greta Hoffman / Pexels</span>
+<span>thisdale.ca</span>
+</div>
+</div>
+</footer>
+
+
+<!-- ASSISTANT (clavardage) -->
+<div style="position: fixed; right: 0; bottom: 16px; z-index: 40; width: 0; height: 0; pointer-events: none">
+<sc-if value="{{showCookies}}" hint-placeholder-val="{{ true }}"><div style="position: absolute; right: 16px; bottom: 110px; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; pointer-events: auto">
+<sc-if value="{{chatOpen}}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-label="Thisdale Assistant" style="width: 370px; max-width: calc(100vw - 32px); height: 540px; max-height: calc(100vh - 140px); background: #ffffff; border: 1px solid rgba(0,0,0,0.08); border-radius: 26px; box-shadow: 0 30px 90px rgba(11,31,92,0.28); display: flex; flex-direction: column; overflow: hidden">
+<div style="background: #0b1f5c; color: #ffffff; padding: 16px 16px 16px 18px; display: flex; align-items: center; gap: 12px">
+<svg aria-hidden="true" width="34" height="34" viewBox="0 0 32 32"><defs><linearGradient id="tg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3e6ae1"/><stop offset="1" stop-color="#0b1f5c"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#tg3)"/><path d="M9 10.5h14" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/><path d="M16 10.5v12" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/><circle cx="22.5" cy="21.5" r="2.2" fill="#7fb2ff"/></svg>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 1px"><span style="font-size: 15px; font-weight: 600">Thisdale Assistant</span><span style="font-size: 12px; color: #c9d4f2; display: inline-flex; align-items: center; gap: 6px"><span class="pulse" style="width: 7px; height: 7px; border-radius: 50%; background: #34c759"></span>Instant answers</span></div>
+<button type="button" onClick="{{toggleChat}}" aria-label="Close the assistant" style="width: 44px; height: 44px; border: none; border-radius: 50%; background: rgba(255,255,255,0.12); color: #ffffff; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div>
+<div ref="{{setList}}" aria-live="polite" style="flex: 1; overflow-y: auto; padding: 18px 16px; display: flex; flex-direction: column; gap: 10px; background: #f7f8fc">
+<sc-for list="{{messages}}" as="m" hint-placeholder-count="2">
+<sc-if value="{{m.isBot}}" hint-placeholder-val="{{ true }}"><div style="align-self: flex-start; max-width: 86%; background: #ffffff; border: 1px solid #eceef5; color: #1d1d1f; font-size: 14px; line-height: 1.5; padding: 11px 14px; border-radius: 18px 18px 18px 6px; white-space: pre-line">{{m.text}}</div></sc-if>
+<sc-if value="{{m.isMe}}" hint-placeholder-val="{{ false }}"><div style="align-self: flex-end; max-width: 86%; background: #3e6ae1; color: #ffffff; font-size: 14px; line-height: 1.5; padding: 11px 14px; border-radius: 18px 18px 6px 18px">{{m.text}}</div></sc-if>
+</sc-for>
+</div>
+<div style="padding: 10px 12px 0; display: flex; gap: 6px; overflow-x: auto; background: #ffffff">
+<sc-for list="{{chips}}" as="c" hint-placeholder-count="4">
+<button type="button" onClick="{{c.ask}}" style="font: inherit; flex-shrink: 0; font-size: 13px; font-weight: 500; min-height: 36px; padding: 0 13px; border: 1px solid #d8def0; border-radius: 980px; background: #ffffff; color: #0b1f5c; cursor: pointer; white-space: nowrap">{{c.label}}</button>
+</sc-for>
+</div>
+<div style="padding: 10px 12px 12px; display: flex; gap: 8px; background: #ffffff">
+<label for="chat-input" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Your question</label>
+<input id="chat-input" type="text" placeholder="Ask your question…" value="{{draft}}" onInput="{{onType}}" onKeyDown="{{onKey}}" class="field" style="flex: 1; min-width: 0; font: inherit; font-size: 15px; padding: 12px 14px; border: 1px solid #d2d2d7; border-radius: 980px; background: #ffffff; color: #1d1d1f">
+<button type="button" onClick="{{sendDraft}}" aria-label="Send" style="width: 46px; height: 46px; flex-shrink: 0; border: none; border-radius: 50%; background: #3e6ae1; color: #ffffff; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+</div>
+<p style="margin: 0; padding: 0 14px 12px; font-size: 11px; color: #6e6e73; background: #ffffff; text-align: center">Virtual assistant: general information only, not advice. <a href="privacy.html" class="ulink">Privacy</a></p>
+</div>
+</sc-if>
+<sc-if value="{{chatClosed}}" hint-placeholder-val="{{ true }}">
+<button type="button" onClick="{{toggleChat}}" aria-label="Open the Thisdale assistant" class="btn chat-launch" style="font: inherit; display: inline-flex; align-items: center; gap: 10px; min-height: 58px; padding: 0 22px 0 18px; border: none; border-radius: 980px; background: #0b1f5c; color: #ffffff; font-size: 15px; font-weight: 600; cursor: pointer; white-space: nowrap; box-shadow: 0 18px 40px rgba(11,31,92,0.35)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8fb4ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.8 7L4 20l1.1-4.6A8 8 0 1121 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg><span class="chat-label">Questions?</span></button>
+</sc-if>
+</div></sc-if>
+<sc-if value="{{cookiesHidden}}" hint-placeholder-val="{{ false }}"><div style="position: absolute; right: 16px; bottom: 0px; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; pointer-events: auto">
+<sc-if value="{{chatOpen}}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-label="Thisdale Assistant" style="width: 370px; max-width: calc(100vw - 32px); height: 540px; max-height: calc(100vh - 140px); background: #ffffff; border: 1px solid rgba(0,0,0,0.08); border-radius: 26px; box-shadow: 0 30px 90px rgba(11,31,92,0.28); display: flex; flex-direction: column; overflow: hidden">
+<div style="background: #0b1f5c; color: #ffffff; padding: 16px 16px 16px 18px; display: flex; align-items: center; gap: 12px">
+<svg aria-hidden="true" width="34" height="34" viewBox="0 0 32 32"><defs><linearGradient id="tg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3e6ae1"/><stop offset="1" stop-color="#0b1f5c"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#tg3)"/><path d="M9 10.5h14" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/><path d="M16 10.5v12" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/><circle cx="22.5" cy="21.5" r="2.2" fill="#7fb2ff"/></svg>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 1px"><span style="font-size: 15px; font-weight: 600">Thisdale Assistant</span><span style="font-size: 12px; color: #c9d4f2; display: inline-flex; align-items: center; gap: 6px"><span class="pulse" style="width: 7px; height: 7px; border-radius: 50%; background: #34c759"></span>Instant answers</span></div>
+<button type="button" onClick="{{toggleChat}}" aria-label="Close the assistant" style="width: 44px; height: 44px; border: none; border-radius: 50%; background: rgba(255,255,255,0.12); color: #ffffff; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div>
+<div ref="{{setList}}" aria-live="polite" style="flex: 1; overflow-y: auto; padding: 18px 16px; display: flex; flex-direction: column; gap: 10px; background: #f7f8fc">
+<sc-for list="{{messages}}" as="m" hint-placeholder-count="2">
+<sc-if value="{{m.isBot}}" hint-placeholder-val="{{ true }}"><div style="align-self: flex-start; max-width: 86%; background: #ffffff; border: 1px solid #eceef5; color: #1d1d1f; font-size: 14px; line-height: 1.5; padding: 11px 14px; border-radius: 18px 18px 18px 6px; white-space: pre-line">{{m.text}}</div></sc-if>
+<sc-if value="{{m.isMe}}" hint-placeholder-val="{{ false }}"><div style="align-self: flex-end; max-width: 86%; background: #3e6ae1; color: #ffffff; font-size: 14px; line-height: 1.5; padding: 11px 14px; border-radius: 18px 18px 6px 18px">{{m.text}}</div></sc-if>
+</sc-for>
+</div>
+<div style="padding: 10px 12px 0; display: flex; gap: 6px; overflow-x: auto; background: #ffffff">
+<sc-for list="{{chips}}" as="c" hint-placeholder-count="4">
+<button type="button" onClick="{{c.ask}}" style="font: inherit; flex-shrink: 0; font-size: 13px; font-weight: 500; min-height: 36px; padding: 0 13px; border: 1px solid #d8def0; border-radius: 980px; background: #ffffff; color: #0b1f5c; cursor: pointer; white-space: nowrap">{{c.label}}</button>
+</sc-for>
+</div>
+<div style="padding: 10px 12px 12px; display: flex; gap: 8px; background: #ffffff">
+<label for="chat-input" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Your question</label>
+<input id="chat-input" type="text" placeholder="Ask your question…" value="{{draft}}" onInput="{{onType}}" onKeyDown="{{onKey}}" class="field" style="flex: 1; min-width: 0; font: inherit; font-size: 15px; padding: 12px 14px; border: 1px solid #d2d2d7; border-radius: 980px; background: #ffffff; color: #1d1d1f">
+<button type="button" onClick="{{sendDraft}}" aria-label="Send" style="width: 46px; height: 46px; flex-shrink: 0; border: none; border-radius: 50%; background: #3e6ae1; color: #ffffff; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+</div>
+<p style="margin: 0; padding: 0 14px 12px; font-size: 11px; color: #6e6e73; background: #ffffff; text-align: center">Virtual assistant: general information only, not advice. <a href="privacy.html" class="ulink">Privacy</a></p>
+</div>
+</sc-if>
+<sc-if value="{{chatClosed}}" hint-placeholder-val="{{ true }}">
+<button type="button" onClick="{{toggleChat}}" aria-label="Open the Thisdale assistant" class="btn chat-launch" style="font: inherit; display: inline-flex; align-items: center; gap: 10px; min-height: 58px; padding: 0 22px 0 18px; border: none; border-radius: 980px; background: #0b1f5c; color: #ffffff; font-size: 15px; font-weight: 600; cursor: pointer; white-space: nowrap; box-shadow: 0 18px 40px rgba(11,31,92,0.35)"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8fb4ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.8 7L4 20l1.1-4.6A8 8 0 1121 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg><span class="chat-label">Questions?</span></button>
+</sc-if>
+</div></sc-if>
+</div>
+
+<!-- BANDEAU TÉMOINS (Loi 25 : désactivés par défaut) -->
+<sc-if value="{{showCookies}}" hint-placeholder-val="{{ true }}">
+<div role="region" aria-label="Cookies" style="position: sticky; bottom: 16px; z-index: 30; margin: 0 16px; display: flex; justify-content: center">
+<div style="max-width: 920px; width: 100%; background: rgba(255,255,255,0.9); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(0,0,0,0.08); border-radius: 22px; padding: 16px 18px 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; box-shadow: 0 20px 50px rgba(20,30,80,0.14)">
+<p style="margin: 0; flex: 1 1 420px; font-size: 13px; line-height: 1.5; color: #424245">This site uses essential cookies. With your consent, we also use analytics and marketing cookies — they are off by default. <a href="privacy.html" class="ulink">Learn more</a></p>
+<div style="display: flex; gap: 8px">
+<button type="button" onClick="{{refuseCookies}}" class="btn btn-ghost" style="font: inherit; font-size: 14px; font-weight: 500; min-height: 44px; padding: 0 20px; border-radius: 980px; border: none; background: rgba(0,0,0,0.05); color: #1d1d1f; cursor: pointer">Decline</button>
+<button type="button" onClick="{{acceptCookies}}" class="btn btn-ink" style="font: inherit; font-size: 14px; font-weight: 500; min-height: 44px; padding: 0 20px; border-radius: 980px; border: none; background: #1d1d1f; color: #ffffff; cursor: pointer">Accept</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+</div>
+</template>
+<script src="runtime.js"></script>
+<script>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { showCookies: true, product: 'sante', situation: 'meds', step: 1, fProduct: null, fWho: null, fGroup: null, err: false, fTime: null, fEmp: null, members: [], faqCat: 'general', chatOpen: false, draft: '', messages: [{ from: 'bot', text: "Hello! I'm the Thisdale assistant. Ask your question or pick a topic below." }] };
+this.listEl = null;
+}
+componentDidUpdate() {
+if (this.listEl) { this.listEl.scrollTop = this.listEl.scrollHeight; }
+}
+answer(q) {
+const t = (q || '').toLowerCase();
+const cta = "\n\nTo get your 3 offers, make a request: a member of our team will contact you.";
+const rules = [
+{ k: ['group insurance', 'group plan for', 'my business', 'my employees', 'company plan', 'small business'], a: 'Yes, we offer group health and dental insurance for businesses. We compare plans based on the size of your team and your budget.' + cta },
+{ k: ['human', 'talk', 'speak', 'call', 'phone', 'someone', 'advisor', 'reach'], a: "Gladly! Call us at 438 231-4777, or make a request online: a member of our team will contact you." },
+{ k: ['drug', 'medication', 'ramq', 'prescription', 'pill', 'medicine'], a: "Each insurer has its own drug list, and some may accept drugs you already take, subject to their conditions. We check for you, insurer by insurer." + cta },
+{ k: ['group', 'employer', 'left my', '90 days'], a: "If you leave a group plan, options without proof of health may be available for a limited time, often about 90 days. Best to contact us quickly." + cta },
+{ k: ['pre-exist', 'preexist', 'condition', 'questionnaire', 'chronic', 'diab'], a: "There are plans with no medical questionnaire, so a pre-existing condition doesn't close the door. We'll discuss it with you to find what's possible." + cta },
+{ k: ['price', 'cost', 'how much', 'expensive', 'premium', 'rate'], a: "The premium depends on your age, your situation and the coverage you choose. Your 3 offers give you the exact picture, with no obligation." + cta },
+{ k: ['travel', 'trip', 'vacation', 'abroad', 'out of province', 'out of country'], a: "Yes, many health insurance plans include travel coverage, depending on the plan. We'll show you what's covered in each of your offers." + cta },
+{ k: ['dental', 'teeth', 'dentist'], a: "Yes, we offer dental insurance, alone or with health coverage depending on the insurer. Waiting periods may apply to major care; we explain them before you sign anything." + cta },
+{ k: ['company', 'companies', 'insurer'], a: "We compare products from the major insurance-of-persons companies available in Québec, then present the 3 best offers for you." + cta },
+{ k: ['how', 'step', 'work', 'after', 'process'], a: "It's simple: 1) you make a request, 2) a member of our team discusses your needs with you, 3) we present your 3 best offers. Then we stay with you for service." },
+{ k: ['life insurance', 'death'], a: "Yes, we offer life insurance to protect your loved ones: income, mortgage, children's education." + cta },
+{ k: ['disabilit', 'off work', 'income'], a: "Disability insurance protects your income if you can't work because of illness or injury." + cta },
+{ k: ['critical illness', 'cancer', 'heart attack', 'stroke'], a: "Critical illness insurance pays a lump sum when you're diagnosed with a covered illness, according to the contract." + cta },
+{ k: ['invest', 'rrsp', 'tfsa', 'retire', 'saving'], a: "For savings and retirement, your request is handled by our investment partner, who will set up a meeting with you." + cta },
+{ k: ['ontario', 'province'], a: "For now, we serve Québec residents." },
+{ k: ['amf', 'authoriz', 'certificate', 'licen'], a: "Services are provided by a Financial Security Advisor registered with the Autorité des marchés financiers (certificate 161128), on behalf of Dubois Services Financiers inc." },
+{ k: ['hello', 'hi ', 'hey', 'bonjour'], a: "Hello! How can I help? Ask me about health insurance, drugs or our services." }
+];
+const hit = rules.find((r) => r.k.some((w) => t.includes(w)));
+return hit ? hit.a : "Good question! For an answer tailored to your situation, a member of our team can contact you. Call 438 231-4777 or make a request online.";
+}
+ask(q) {
+const text = (q || '').trim();
+if (!text) { return; }
+this.setState((st) => ({ draft: '', messages: st.messages.concat([{ from: 'me', text }, { from: 'bot', text: this.answer(text) }]) }));
+}
+chooseProduct(label) {
+const members = label === 'Investments' ? [{ role: 'adult', age: '', smoker: null }] : [];
+this.setState({ fProduct: label, step: 2, fWho: null, fGroup: null, fEmp: null, members, err: false });
+}
+buildMembers(who) {
+const A = { role: 'adult', age: '', smoker: null }, S = { role: 'spouse', age: '', smoker: null }, K = { role: 'child', age: '', smoker: null };
+const map = { 'Individual': [A], 'Just me': [A], 'Couple': [A, S], 'My spouse and me': [A, S], 'Single parent': [A, K], 'Family': [A, S, K] };
+return (map[who] || [A]).map((m) => Object.assign({}, m));
+}
+renderVals() {
+const products = [
+{ id: 'sante', label: 'Health', name: 'Health, dental and travel', features: ['Medical care and drugs', 'Dental and paramedical', 'Travel, depending on the plan'], cta: 'Start my request' },
+{ id: 'group', label: 'Group', name: 'Group insurance (business)', features: [], cta: '' },
+{ id: 'vie', label: 'Life', name: 'Life insurance', features: ['Coverage amount', 'Length of coverage', 'Premium that fits your budget'], cta: 'Start my request' },
+{ id: 'invalidite', label: 'Disability', name: 'Disability insurance', features: ['Protected monthly income', 'Waiting period before benefits', 'Benefit period'], cta: 'Start my request' },
+{ id: 'mg', label: 'Critical illness', name: 'Critical illness insurance', features: ['Lump-sum amount', 'Covered illnesses', 'Available options'], cta: 'Start my request' },
+{ id: 'invest', label: 'Investments', name: 'Investments', features: ['Your savings and retirement goals', 'Your investment horizon', 'Your risk tolerance'], cta: 'Start my request' }
+];
+const formName = { group: 'Group insurance (business)', sante: 'Health, dental and travel', vie: 'Life insurance', invalidite: 'Disability', mg: 'Critical illness', invest: 'Investments' };
+const found = products.find((p) => p.id === this.state.product) || products[0];
+const cur = Object.assign({}, found, { start: () => this.chooseProduct(formName[found.id]), btn: found.id === 'group' ? 'Get a quote' : found.id === 'invest' ? 'Book a meeting' : 'Get my 3 offers' });
+const sits = [
+{ id: 'meds', tag: 'SITUATION 01', label: 'Drugs not covered', title: 'Drug refused by your group plan or the RAMQ? We have options.', text: "", points: ['We check your drug, insurer by insurer', 'Some insurers accept drugs you already take', 'Only the offers that make sense for you'] },
+{ id: 'pre', tag: 'SITUATION 02', label: 'Pre-existing condition', title: 'Pre-existing condition? The door stays open.', text: "", points: ['Plans with no medical questionnaire', 'No proof of health after a group plan (about 90 days)', 'An honest conversation about your options'] },
+{ id: 'ok', tag: 'SITUATION 03', label: 'In good health', title: 'In good health? Pay the right price.', text: "", points: ['Medical, dental and travel depending on the plan', 'With or without a medical questionnaire', 'The 3 best offers for your profile'] }
+];
+const sit = sits.find((x) => x.id === this.state.situation) || sits[0];
+const faqData = {
+general: [
+{ q: 'What happens after my request?', a: "A member of our team contacts you to discuss your needs. Then we compare insurers and present your 3 best offers." },
+{ q: 'Which insurers do you work with?', a: "With the major insurance-of-persons companies available in Québec. We compare their products to present the best-suited offers." },
+{ q: 'Does my request commit me to anything?', a: "No. Your request and our offers come with no obligation. You only choose if an offer suits you." },
+{ q: 'How much does it cost?', a: "The premium depends on your age, your situation and the coverage you choose. Your 3 offers give you the exact picture." }
+],
+sante: [
+{ q: "My drug isn't covered. Can you help?", a: "Often, yes. Each insurer has its own list, and some may accept drugs you already take, subject to their conditions. We check for you." },
+{ q: "I have a pre-existing condition. Am I insurable?", a: "There are plans with no medical questionnaire. And if you leave a group plan, options without proof of health may be available for about 90 days." },
+{ q: "Are there waiting periods for dental?", a: "For major care (crowns, bridges, dentures), expect 3 months to 1 year depending on the insurer. If you had coverage recently, some waiting periods may be waived depending on the plan." },
+{ q: "Is travel insurance included?", a: "Many individual health plans include travel coverage, depending on the plan. We'll show you what's covered in each of your offers." },
+{ q: 'Do I need to be covered by the RAMQ?', a: "Yes. Individual health insurance requires RAMQ coverage, including the public prescription drug insurance plan. For dental only, some insurers require only basic RAMQ coverage. We check your eligibility with you." }
+],
+vie: [
+{ q: "How much life insurance do I need?", a: "It depends on your debts, the income to replace and the people who depend on you. We'll do the math together." },
+{ q: 'Term or permanent: what is the difference?', a: "Term covers you for a set period (for example 10 or 20 years) and generally costs less. Permanent covers you for life, with a higher premium." },
+{ q: "Do I need a medical exam?", a: "Not always. Depending on the amount and the insurer, it may be a simple questionnaire. Options with no questionnaire also exist." }
+],
+invalidite: [
+{ q: "I have disability insurance at work. Is that enough?", a: "Not always. It may cover only part of your income and ends if you leave your job. We check the gaps with you." },
+{ q: 'I am self-employed. Am I covered?', a: "Without an employer plan, your income is often unprotected. Individual disability insurance can fill that gap." },
+{ q: 'When do benefits start?', a: "After a waiting period you choose in the contract. The longer it is, the lower the premium. We find the right balance with you." }
+],
+mg: [
+{ q: "How is it different from disability insurance?", a: "Critical illness pays a lump sum when you're diagnosed with a covered illness, even if you keep working. Disability replaces a monthly income if you can no longer work." },
+{ q: "How can I use the money?", a: "However you want: treatments, mortgage, recovery, help at home." },
+{ q: 'Which illnesses are covered?', a: "It varies by contract and insurer. We compare the covered illnesses and conditions for you." }
+],
+group: [
+{ q: 'My business is small. Is that possible?', a: 'Yes. There are group plans for small businesses, even with few employees. We compare options based on the size of your team and your budget.' },
+{ q: 'What can a group plan cover?', a: 'Depending on the plan: health care and drugs, dental care, and sometimes life, disability or travel coverage. We build the plan with you.' },
+{ q: "Who handles the plan after it's set up?", a: 'Our team stays your point of contact: employee enrolment, changes and questions at renewal.' }
+],
+invest: [
+{ q: 'How does it work?', a: "We set up a meeting to understand your goals, investment horizon and risk tolerance. Then we propose a clear strategy." },
+{ q: "I don't know where to start.", a: "That's normal. We start from your plans (retirement, a purchase, children's education) and move one step at a time." }
+]
+};
+const faqLabels = [['general', 'General'], ['sante', 'Health, dental and travel'], ['vie', 'Life'], ['invalidite', 'Disability'], ['mg', 'Critical illness'], ['group', 'Group'], ['invest', 'Investments']];
+const fc = this.state.faqCat;
+const step = this.state.step;
+const mk = (arr, key, after) => arr.map((label) => ({ label, selected: this.state[key] === label, unselected: this.state[key] !== label, pick: () => this.setState(Object.assign({ [key]: label, err: false }, after || {})) }));
+const isHealth = this.state.fProduct === 'Health, dental and travel';
+const P = this.state.fProduct;
+const isGroup = P === 'Group insurance (business)';
+const kind = isGroup ? 'group' : isHealth ? 'health' : (['Life insurance', 'Disability', 'Critical illness'].indexOf(P) >= 0 ? 'person' : (P === 'Investments' ? 'invest' : 'family'));
+const whoList = kind === 'group' ? [] : kind === 'person' ? ['Just me', 'My spouse and me'] : (kind === 'invest' ? [] : ['Individual', 'Couple', 'Single parent', 'Family']);
+const mem = this.state.members || [];
+const ageOk = (v) => /^\d{1,3}$/.test(v) && Number(v) <= 110;
+const needSmoker = kind === 'person';
+const missingWho = kind !== 'invest' && kind !== 'group' && !this.state.fWho;
+const missingEmp = kind === 'group' && !this.state.fEmp;
+const missingAge = kind !== 'group' && (mem.length === 0 || mem.some((m) => !ageOk(m.age)));
+const missingSmoker = needSmoker && mem.some((m) => !m.smoker);
+const missingGroup = isHealth && !this.state.fGroup;
+const canNext = !missingEmp && !missingWho && !missingAge && !missingSmoker && !missingGroup;
+const errorText = missingEmp ? "Please indicate the number of employees." : missingWho ? 'Please tell us who the request is for.' : (missingAge ? 'Please enter the age of each person.' : (missingSmoker ? 'Please indicate smoker or non-smoker for each person.' : 'Please answer the group plan question.'));
+const upd = (i, patch) => this.setState({ members: mem.map((m, j) => (j === i ? Object.assign({}, m, patch) : m)), err: false });
+let childN = 0;
+const memberVals = mem.map((m, i) => {
+const label = m.role === 'adult' ? (kind === 'invest' ? 'Your age' : 'You') : (m.role === 'spouse' ? 'Spouse' : 'Child ' + (++childN));
+const kids = mem.filter((x) => x.role === 'child').length;
+return { idx: i, label, age: m.age, onAge: (e) => upd(i, { age: String(e.target.value || '').replace(/\D/g, '').slice(0, 3) }), showSmoker: needSmoker, isNon: m.smoker === 'non', notNon: m.smoker !== 'non', isYes: m.smoker === 'oui', notYes: m.smoker !== 'oui', setNon: () => upd(i, { smoker: 'non' }), setYes: () => upd(i, { smoker: 'oui' }), removable: m.role === 'child' && kids > 1, remove: () => this.setState({ members: mem.filter((x, j) => j !== i) }) };
+});
+const famWho = this.state.fWho === 'Single parent' || this.state.fWho === 'Family';
+const n = Math.min(step, 3);
+return {
+productOpts: ['Health, dental and travel', 'Life insurance', 'Disability', 'Critical illness', 'Investments', 'Not sure yet', 'Group insurance (business)'].map((label) => ({ label, selected: this.state.fProduct === label, unselected: this.state.fProduct !== label, pick: () => this.chooseProduct(label) })),
+whoOpts: whoList.map((label) => ({ label, selected: this.state.fWho === label, unselected: this.state.fWho !== label, pick: () => this.setState({ fWho: label, members: this.buildMembers(label), err: false }) })),
+timeOpts: mk(['Morning', 'Afternoon', 'Evening'], 'fTime'),
+groupOpts: mk(['Yes', 'No'], 'fGroup'),
+stepNum: n,
+prog: { s1: n >= 1, n1: n < 1, s2: n >= 2, n2: n < 2, s3: n >= 3, n3: n < 3 },
+isStep1: step === 1, isStep2: step === 2, isStep3: step === 3, isDone: step === 4, notDone: step !== 4,
+isHealth: isHealth,
+step2Title: kind === 'group' ? 'Your business' : kind === 'invest' ? 'Your age' : (needSmoker ? 'Who is it for? Age and smoking' : 'Who is it for? Age of each person'),
+showWho: kind !== 'invest' && kind !== 'group',
+isGroup: kind === 'group',
+empOpts: ['1 to 4 employees', '5 to 19 employees', '20 to 49 employees', '50 employees or more'].map((label) => ({ label, selected: this.state.fEmp === label, unselected: this.state.fEmp !== label, pick: () => this.setState({ fEmp: label, err: false }) })),
+startGroup: () => this.chooseProduct('Group insurance (business)'),
+hasMembers: mem.length > 0,
+members: memberVals,
+canAddChild: famWho && kind !== 'person',
+addChild: () => this.setState({ members: mem.concat([{ role: 'child', age: '', smoker: null }]) }),
+errorText: errorText,
+chosenProduct: this.state.fProduct || '',
+showError: this.state.err,
+startHealth: () => this.chooseProduct('Health, dental and travel'),
+goNext: () => (canNext ? this.setState({ step: 3, err: false }) : this.setState({ err: true })),
+goBack: () => this.setState({ step: Math.max(step - 1, 1), err: false }),
+submit: () => this.setState({ step: 4 }),
+restart: () => this.setState({ step: 1, fProduct: null, fWho: null, fGroup: null, fTime: null, members: [], err: false }),
+tabs: products.map((p) => ({ label: p.label, selected: p.id === cur.id, unselected: p.id !== cur.id, pick: () => this.setState({ product: p.id }) })),
+current: cur,
+isInvestTab: found.id === 'invest',
+isOffers: found.id !== 'invest' && found.id !== 'group',
+isGroupTab: found.id === 'group',
+faqTabs: faqLabels.map(([id, label]) => ({ label, selected: id === fc, unselected: id !== fc, pick: () => this.setState({ faqCat: id }) })),
+faqItems: faqData[fc] || faqData.general,
+chatOpen: this.state.chatOpen,
+chatClosed: !this.state.chatOpen,
+cookiesHidden: !this.state.showCookies,
+toggleChat: () => this.setState({ chatOpen: !this.state.chatOpen }),
+messages: this.state.messages.map((m) => ({ text: m.text, isBot: m.from === 'bot', isMe: m.from === 'me' })),
+chips: ['My drug was refused', 'Pre-existing condition', 'I left my group plan', 'Is travel included?', 'How much does it cost?', 'How does it work?', 'Talk to someone'].map((label) => ({ label, ask: () => this.ask(label) })),
+draft: this.state.draft,
+onType: (e) => this.setState({ draft: e.target.value }),
+onKey: (e) => { if (e.key === 'Enter') { e.preventDefault(); this.ask(this.state.draft); } },
+sendDraft: () => this.ask(this.state.draft),
+setList: (el) => { this.listEl = el; },
+sit: sit,
+situations: sits.map((x) => ({ tag: x.tag, label: x.label, selected: x.id === sit.id, unselected: x.id !== sit.id, pick: () => this.setState({ situation: x.id }) })),
+showCookies: this.state.showCookies,
+acceptCookies: () => this.setState({ showCookies: false }),
+refuseCookies: () => this.setState({ showCookies: false }),
+openCookies: () => this.setState({ showCookies: true })
+};
+}
+}
+</script>
+<script src="site.js"></script>
+<script>mountDC(Component, document.getElementById('tpl'), document.getElementById('app'), window.ThisdaleHooks);</script>
+</body>
+</html>
